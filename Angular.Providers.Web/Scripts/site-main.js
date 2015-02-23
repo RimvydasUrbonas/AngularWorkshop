@@ -8,7 +8,10 @@
         'respond': 'libs/respond',
         'angular': "libs/angular.min",
         'app-module': "app/app-module",
-        'app-invoice-controller': "app/app-invoice-controller"
+        'app-invoice-controller': "app/app-invoice-controller",
+        'invoice-with-provider-module': "app/invoice-with-provider/invoice-with-provider-module",
+        'invoice-with-provider-controller': "app/invoice-with-provider/invoice-with-provider-controller",
+        'invoice-with-provider-providers': "app/invoice-with-provider/invoice-with-provider-providers",
     },
     shim: {
         'jquery': [],

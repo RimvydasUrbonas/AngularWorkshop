@@ -18,5 +18,10 @@ namespace Angular.Providers.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult InvoiceControllerWithProvider()
+        {
+            return View();
+        }
     }
 }
