@@ -2,14 +2,16 @@
     'use strict';
 
     angular.module('invoice-with-provider-controller', ['invoice-with-provider-providers'])
-        .controller('AppInvoiceControllerWithProvider', ['currencyConverter', function(currencyConverter) {
+        .controller('AppInvoiceControllerWithProvider', ['CurrencyConverter', function (CurrencyConverter) {
             this.qty = 1;
             this.cost = 2;
             this.inCurr = 'EUR';
-            this.currencies = currencyConverter.currencies;
+            var converter = new CurrencyConverter();
+
+            this.currencies = converter.currencies;
 
             this.total = function total(outCurr) {
-                return currencyConverter.convert(this.qty * this.cost, this.inCurr, outCurr);
+                return converter.convert(this.qty * this.cost, this.inCurr, outCurr);
             };
             this.pay = function pay() {
                 window.alert("Thanks!");
