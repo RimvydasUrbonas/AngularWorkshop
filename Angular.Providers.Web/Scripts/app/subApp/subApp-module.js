@@ -1,7 +1,5 @@
-﻿define('subApp-module', ['angular'], function (ng) {
+﻿define('subApp-module', ['angular', 'subApp-converter-controller', 'subApp-directive'], function (ng) {
     'use strict';
 
-    ng.module('subApp-module', []);
-
-    require(['subApp-converter-controller', 'subApp-directive']);
+    ng.module('subApp-module', ['subApp-converter-controller', 'subApp-directive']);
 });
