@@ -2,11 +2,12 @@
     'use strict';
 
     angular.module('invoice-with-provider-controller', ['invoice-with-provider-providers'])
-        .controller('AppInvoiceControllerWithProvider', ['CurrencyConverter', 'currencyConverterService', function (CurrencyConverter, currencyConverterService) {
+        .controller('AppInvoiceControllerWithProvider', ['CurrencyConverter', 'currencyConverterService', 'converter',
+            function (CurrencyConverter, currencyConverterService, converterProvider) {
             this.qty = 1;
             this.cost = 2;
             this.inCurr = 'EUR';
-            var converter = currencyConverterService;
+            var converter = converterProvider;
 
             this.currencies = converter.currencies;
 
