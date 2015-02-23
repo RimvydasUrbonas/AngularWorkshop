@@ -7,7 +7,8 @@
         'bootstrap': 'libs/bootstrap',
         'respond': 'libs/respond',
         'angular': "libs/angular.min",
-        'app-module': "app/app-module"
+        'app-module': "app/app-module",
+        'app-invoice-controller': "app/app-invoice-controller"
     },
     shim: {
         'jquery': [],

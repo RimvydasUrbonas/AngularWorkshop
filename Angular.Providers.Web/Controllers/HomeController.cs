@@ -11,8 +11,11 @@ namespace Angular.Providers.Web.Controllers
 
         public ActionResult Invoice()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        public ActionResult InvoiceController()
+        {
             return View();
         }
     }

@@ -125,6 +125,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\app\app-invoice-controller.js" />
     <Content Include="Scripts\app\app-module.js" />
     <Content Include="Scripts\libs\angular.min.js" />
     <Content Include="Scripts\libs\bootstrap.js" />
@@ -152,6 +153,7 @@
     <Content Include="Views\Home\Invoice.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\libs\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\InvoiceController.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
