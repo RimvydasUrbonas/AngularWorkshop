@@ -1,5 +1,7 @@
-﻿define('app-converter-service', ['angular'], function (ng) {
+﻿define('app-converter-service', [], function () {
     'use strict';
-
-    ng.module('app-converter-service').service();
+    function converterService() {
+        // Implementation
+    }
+    return converterService;
 });

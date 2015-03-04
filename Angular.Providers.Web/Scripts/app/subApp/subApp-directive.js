@@ -1,5 +1,8 @@
-﻿define('subApp-directive', ['angular'], function (ng) {
+﻿define('subApp-directive', [], function () {
     'use strict';
+    function directive() {
+        // implementation
+    }
 
-    ng.module('subApp-directive').directive();
+    return directive;
 });

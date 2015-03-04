@@ -1,5 +1,11 @@
-﻿define('app-converter-controller', ['angular'], function (ng) {
+﻿define('app-converter-controller', [], function () {
     'use strict';
 
-    ng.module('app-converter-controller').controller();
+    function controllerFunction($scope, converterService) {
+        // Controller implementation
+    }
+
+    controllerFunction.$inject = ['$scope', 'converterService'];
+
+    return controllerFunction;
 });

@@ -1,5 +1,9 @@
-﻿define('subApp-converter-controller', ['angular'], function (ng) {
+﻿define('subApp-converter-controller', [], function () {
     'use strict';
 
-    ng.module('subApp-converter-controller').controller();
+    function controllerFunction($scope) {
+        // Controller implementation
+    }
+    controllerFunction.$inject = ['$scope'];
+    return controllerFunction;
 });
