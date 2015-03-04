@@ -128,7 +128,9 @@
     <Content Include="Scripts\app\app-invoice-controller.js" />
     <Content Include="Scripts\app\app-module.js" />
     <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-controller.js" />
-    <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-providers.js" />
+    <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-service.js" />
+    <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-factory.js" />
+    <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-provider.js" />
     <Content Include="Scripts\app\invoice-with-provider\invoice-with-provider-module.js" />
     <Content Include="Scripts\libs\angular.min.js" />
     <Content Include="Scripts\libs\bootstrap.js" />

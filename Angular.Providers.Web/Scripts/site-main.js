@@ -11,7 +11,9 @@
         'app-invoice-controller': "app/app-invoice-controller",
         'invoice-with-provider-module': "app/invoice-with-provider/invoice-with-provider-module",
         'invoice-with-provider-controller': "app/invoice-with-provider/invoice-with-provider-controller",
-        'invoice-with-provider-providers': "app/invoice-with-provider/invoice-with-provider-providers",
+        'invoice-with-provider-factory': "app/invoice-with-provider/invoice-with-provider-factory",
+        'invoice-with-provider-service': "app/invoice-with-provider/invoice-with-provider-service",
+        'invoice-with-provider-provider': "app/invoice-with-provider/invoice-with-provider-provider",
     },
     shim: {
         'jquery': [],

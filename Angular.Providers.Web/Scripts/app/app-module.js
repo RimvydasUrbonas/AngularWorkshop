@@ -1,4 +1,6 @@
-﻿define('app-module', ['angular', 'app-invoice-controller', 'invoice-with-provider-module'], function (ng) {
+﻿define('app-module', ['angular', 'app-invoice-controller', 'invoice-with-provider-module'], function (ng, invoiceController) {
     'use strict';
-    ng.module('app-module', ['app-invoice-controller', 'invoice-with-provider-module']);
+
+    ng.module('app-module', ['invoice-with-provider-module'])
+    .controller('AppInvoiceController', invoiceController);
 });

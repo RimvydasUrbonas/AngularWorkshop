@@ -1,8 +1,6 @@
-﻿define('app-invoice-controller', ['angular'], function (ng) {
+﻿define('app-invoice-controller', [], function () {
     'use strict';
-
-    angular.module('app-invoice-controller', [])
-    .controller('AppInvoiceController', function () {
+    var controller = function () {
         this.qty = 1;
         this.cost = 2;
         this.inCurr = 'EUR';
@@ -22,7 +20,9 @@
         this.pay = function pay() {
             window.alert("Thanks!");
         };
-    });
+    }
+
+    return controller;
 });
 
 
