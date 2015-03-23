@@ -1,0 +1,54 @@
+﻿
+<div ng-switch on="formStatus" ng-controller="InvoiceController">
+    
+    <div ng-cloak class="server-side-message-container">        
+        <div class="caution-alert message-caution-container" ng-show="messages.caution.length > 0" ng-repeat="m in messages.caution">           
+           <div class="caution message-text">                
+                <p>{{m.text}}</p>                
+            </div>
+            <button type="button" class="message-close-button" ng-click="RemoveMessage(messages.caution, m)"></button>
+            </div>
+        <div class="error-alert message-error-container" ng-show="messages.error.length > 0" ng-repeat="m in messages.error">            
+            <div class="error message-text">                
+                <p>{{m.text}}</p>                
+            </div>
+            <button type="button" class="message-close-button" ng-click="RemoveMessage(messages.error, m)"></button>            
+        </div>
+        <div class="success-alert message-success-container" ng-show="messages.success.length > 0" ng-repeat="m in messages.success">            
+            <div class="success message-text">                
+                <p>{{m.text}}</p>                
+            </div>
+            <button type="button" class="message-close-button" ng-click="RemoveMessage(messages.success, m)"></button>            
+        </div>        
+    </div>
+          
+    <div ng-switch-default>
+        <h2>Invoice form.</h2>
+        <div>
+            <b>Invoice:</b>
+            
+            <div>
+                User name: <input type="text" min="0" ng-model="formData.userName" required>
+            </div>
+            <div>
+                Quantity: <input type="number" min="0" ng-model="formData.qty" required>
+            </div>
+            <div>
+                Costs: <input type="number" min="0" ng-model="formData.cost" required>
+                <select ng-model="formData.inCurr">
+                    <option ng-repeat="c in currencies">{{c}}</option>
+                </select>
+            </div>
+            <div>
+                <b>Total:</b>
+                <span ng-repeat="c in currencies">
+                    {{total(c) | currency:c}}
+                </span>
+                <button class="btn" ng-click="pay()">Pay</button>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="Submited">
+        <h1>Thank you!!</h1>
+    </div>
+</div>

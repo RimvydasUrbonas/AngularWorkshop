@@ -1,4 +1,4 @@
-﻿require.config({
+require.config({
     enforceDefine: false,
     baseUrl: '/scripts/',
     paths: {
@@ -7,13 +7,16 @@
         'bootstrap': 'libs/bootstrap',
         'respond': 'libs/respond',
         'angular': "libs/angular.min",
-        'app-module': "app/app-module",
-        'app-invoice-controller': "app/app-invoice-controller",
-        'invoice-with-provider-module': "app/invoice-with-provider/invoice-with-provider-module",
-        'invoice-with-provider-controller': "app/invoice-with-provider/invoice-with-provider-controller",
-        'invoice-with-provider-factory': "app/invoice-with-provider/invoice-with-provider-factory",
-        'invoice-with-provider-service': "app/invoice-with-provider/invoice-with-provider-service",
-        'invoice-with-provider-provider': "app/invoice-with-provider/invoice-with-provider-provider",
+
+        ////////// Section is auto-generated. Run Grunt task "arrange-dependencies" to re-create it /////////        
+        // @import app //
+ "app-module": "app/app-module",
+ "app-templates": "app/app-templates",
+ "invoice-controller": "app/invoice/invoice-controller",
+ "invoice-module": "app/invoice/invoice-module",
+ "invoice-service": "app/invoice/invoice-service",
+ "user-messages-factory": "app/invoice/user-messages-factory",
+// @endimport //
     },
     shim: {
         'jquery': [],

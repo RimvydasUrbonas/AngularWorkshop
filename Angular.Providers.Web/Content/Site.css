@@ -22,3 +22,87 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.server-side-message-container {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999; }
+  @media screen and (min-width: 768px) {
+    .server-side-message-container {
+      left: 50%;
+      margin-left: -365px;
+      width: 730px; } }
+
+.message-success-container, .message-error-container, .message-caution-container, .message-information-container {
+  margin: 0 5px;
+  position: relative; }
+  .message-success-container:before, .message-error-container:before, .message-caution-container:before, .message-information-container:before {
+    content: '';
+    height: 22px;
+    left: 15px;
+    position: absolute;
+    top: 8px;
+    width: 22px; }
+  .message-success-container:last-child, .message-error-container:last-child, .message-caution-container:last-child, .message-information-container:last-child {
+    border-radius: 0 0 4px 4px;
+    overflow: hidden; }
+
+.message-success-container:before {
+  background: url('/Content/images/message-success.svg') no-repeat center; }
+.message-success-container ul {
+  background-color: #2e9a58; }
+.message-success-container .success {
+  background: #33aa61; }
+.message-error-container:before {
+  background: url('/Content/images/message-error.svg') no-repeat center; }
+.message-error-container ul {
+  background-color: #d93140; }
+.message-error-container .error {
+  background: #dc4250; }
+.message-caution-container:before {
+  background: url('/Content/images/message-caution.svg') no-repeat center; }
+.message-caution-container ul {
+  background-color: #f7a81e; }
+.message-caution-container .caution {
+  background: #f8b032; }
+.message-information-container:before {
+  background: url('/Content/images/message-information.svg') no-repeat center; }
+.message-information-container ul {
+  background-color: #268db1; }
+.message-information-container .information {
+  background: #2a9ac2; }
+.message-text {
+  min-height: 24px;
+  padding: 8px 50px; }
+  .message-text p {
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+    text-transform: none; }
+.message-list {
+  margin: 10px -50px -8px;
+  padding: 8px 50px; }
+  .message-list li {
+    color: #fff;
+    list-style-position: inside; }
+.message-close-button {
+  background: transparent;
+  border: 0;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px; }
+  .message-close-button:after {
+    background: url('/Content/images/message-close.svg') no-repeat center;
+    content: '';
+    height: 12px;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    position: absolute;
+    top: 50%;
+    width: 12px; }
