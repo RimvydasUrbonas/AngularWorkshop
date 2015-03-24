@@ -1,5 +1,5 @@
-﻿define('app-module', ['angular', 'invoice-module'], function (ng) {
+﻿define('app-module', ['angular', 'invoice-module', 'shared-module'], function (ng) {
     'use strict';
 
-    ng.module('app-module', ['invoice-module']);
+    ng.module('app-module', ['invoice-module', 'shared-module']);
 });

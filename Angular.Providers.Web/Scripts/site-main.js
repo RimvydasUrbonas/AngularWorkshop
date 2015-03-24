@@ -16,6 +16,7 @@ require.config({
  "invoice-module": "app/invoice/invoice-module",
  "invoice-service": "app/invoice/invoice-service",
  "user-messages-factory": "app/invoice/user-messages-factory",
+ "shared-module": "app/shared/shared-module",
 // @endimport //
     },
     shim: {

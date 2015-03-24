@@ -26,6 +26,10 @@
         <h2>Invoice form.</h2>
         <div>
             <b>Invoice:</b>
+            
+            <div>
+                User name: <input type="text" min="0" ng-model="formData.userName" required>
+            </div>
             <div>
                 Quantity: <input type="number" min="0" ng-model="formData.qty" required>
             </div>
@@ -45,6 +49,6 @@
         </div>
     </div>
     <div ng-switch-when="Submited">
-        <h1>Thank you</h1>
+        <h1>Thank you!!</h1>
     </div>
 </div>

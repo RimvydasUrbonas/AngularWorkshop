@@ -149,6 +149,7 @@
     <Content Include="Scripts\app\app-module.js" />
     <Content Include="Scripts\app\invoice\invoice-service.js" />
     <Content Include="Scripts\app\invoice\user-messages-factory.js" />
+    <Content Include="Scripts\app\shared\shared-module.js" />
     <Content Include="Scripts\libs\angular.min.js" />
     <Content Include="Scripts\libs\bootstrap.js" />
     <Content Include="Scripts\libs\bootstrap.min.js" />
