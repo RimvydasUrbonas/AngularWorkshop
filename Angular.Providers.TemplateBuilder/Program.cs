@@ -1,21 +1,24 @@
 ﻿using System;
-using Angular.Providers.TemplateBuilder.Builder;
-using Angular.Providers.Web.Controllers;
+using System.IO;
+using RazorEngine;
+using RazorEngine.Templating;
 
 namespace Angular.Providers.TemplateBuilder
 {
-    // Created using https://github.com/danmalcolm/NonHttpRunTimeRazorSupport
     public class Program
     {
-        static Uri BaseUri = new Uri("http://www.example.com");
-
         public static void Main(string[] args)
         {
-            ViewRenderer renderer = ViewRenderer.ForAssemblyOf<HomeController>();
-
-            string content = renderer.RenderView(args[0], null, BaseUri);
-
-            Console.WriteLine(content);
+            try
+            {
+                var cshtmlContent = File.ReadAllText(args[0]);
+                string content = Engine.Razor.RunCompile(cshtmlContent, "templateKey", null, new {});
+                Console.WriteLine(content);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+            }            
         }
     }
 }

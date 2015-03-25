@@ -3,7 +3,7 @@
     config = require('../../gulp.config.js')(),
     utils = require('../../utils/utils.js')(),
 
-    processFile = require('../process-cshtml-file/process-cshtml-file.js');
+    processFile = require('../process-single-cshtml-file/process-single-cshtml-file.js');
 
 function task() {
 

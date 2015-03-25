@@ -29,10 +29,15 @@ function compileTemplate(file, destinationFileName) {
 
     try {
 
-        var razorFile = ' ~' + file.history[0].replace(file.cwd, '').replace(/\\/g, '/'),
-            results = syncExec(config.templaterUtility + razorFile);
-
-        utils.log('-> ' + destinationFileName, 'green');
+        var razorFile = file.history[0],
+            results = syncExec(config.templaterUtility + ' "' + razorFile + '"');
+      
+        if (results.stderr && results.stderr.indexOf('cleanup temp files') == -1) {
+            utils.log(razorFile, 'green');
+            utils.log(results.stderr, 'red');
+        }
+    
+        utils.log('Compiled -> ' + destinationFileName, 'green');
 
         return $.file(destinationFileName, results.stdout)
             .pipe(gulp.dest(config.templatesAppFolder));
@@ -55,7 +60,7 @@ function deleteTemplate(file, destinationFileName) {
 
         del(fileToDelete, function() {
             
-            utils.log('-> ' + fileToDelete, 'red');
+            utils.log('Deleted -> ' + fileToDelete, 'red');
         });
 
     } catch (e) {

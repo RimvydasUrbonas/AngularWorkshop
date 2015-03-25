@@ -32,8 +32,9 @@ module.exports = function () {
             options: {
                 module: 'app-templates',
                 standAlone: false,
-                root: '/Templates/app/',                
-                templateHeader: 'define("<%= module %>", [\'angular\'], function(angular){  angular.module("<%= module %>"<%= standalone %>).run(["$templateCache", function($templateCache) {\n',
+                root: '/Templates/app/',
+                //templateHeaderOld: 'angular.module("<%= module %>"<%= standalone %>).run(["$templateCache", function($templateCache) {\n',
+                templateHeader: 'require("<%= module %>", [\'angular\'], function(angular){  angular.module("<%= module %>"<%= standalone %>).run(["$templateCache", function($templateCache) {\n',
                 templateFooter: '\n}]);\n});'
             }
         },

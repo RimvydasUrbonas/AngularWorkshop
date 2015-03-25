@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\RazorEngine.3.6.3\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -116,11 +119,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\App\Invoice\Invoice.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Invoice.cshtml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -177,10 +175,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\libs\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\InvoiceController.cshtml" />
-    <Content Include="Views\App\Invoice\Invoice.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Invoice.generated.cs</LastGenOutput>
-    </Content>
+    <Content Include="Views\App\Invoice\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
